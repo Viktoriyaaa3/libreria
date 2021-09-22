@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+    <form method="post">
+        <input type="text" placeholder="inserire i dati">
+        <input type="text" name="username" placeholder="username">
+        <input type="text" name="password" placeholder="password">
+        <button type="submit">Invia</button>
+    </form>
+</div>
+<div>Lista utenti
+   <!--tbody>
+   <tr th:if="${users.iterator().next().getUsename().isEmpty()}">
+       <td colspan="2">Non ci sono utenti con questo nome</td>
+   </tr>
+   <tr th:each="users :${users}">
+       <td><span th:text="${users}">Username</span></td>
+   </tr>
+   </tbody-->
+    {{#names}}
+<b>{{username}}</b>
+        <b>{{password}}</b>
+        {{/names}}
+</div>
+
+</body>
+</html>
